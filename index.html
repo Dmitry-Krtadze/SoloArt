@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Головна - Soul Art</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="sass/style.css">
+
+
+
 </head>
 <body>
+    <section id="preloader">
+        <l-jelly-triangle
+        size="100"
+        speed="1.75"
+        color="#B7B597" 
+      ></l-jelly-triangle>
+    </section>
+
+
     <header>
         <nav>
             <div class="logo">
@@ -36,12 +50,48 @@
     </header>
     <main>
         <section class="carousel">
-            <!-- Карусель з роботами -->
+            <div class="slickSlider">
+                <div class="sliderItem">
+                    <img src="photos/1.jpg" alt="">
+                </div>
+                <div class="sliderItem">
+                    <img src="photos/2.jpg" alt="">
+                </div>
+                <div class="sliderItem">
+                    <img src="photos/3.jpg" alt="">
+                </div>
+                <div class="sliderItem">
+                    <img src="photos/4.jpg" alt="">
+                </div>
+                <div class="sliderItem">
+                    <img src="photos/5.jpg" alt="">
+                </div>
+            </div>
         </section>
+
+
+
+
+
         <section class="services">
             <h2>Наші послуги</h2>
-            <!-- Блок з послугами -->
+            <div class="services_blocks">
+                <div class="services_block">
+                    <p>Розпис стін</p>
+                </div>
+                <div class="services_block">
+                    <p>3d візуалізація інтер’єрів</p>
+                </div>
+                <div class="services_block">
+                    <p>Розпис предметів </p>
+                </div>
+                
+            </div>
         </section>
+
+
+
+
         <section class="about-us">
             <h2>Про нас</h2>
             <p>Ми- команда Soul Art що вкладає в кожен проект частинку себе та своєї душі. допоможемо реалізувати ваші мрії у реальність. завжди раді допомогти вам Наші послуги.</p>
@@ -51,6 +101,9 @@
         <!-- Контакти, соц мережі -->
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/slick.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/jellyTriangle.js"></script>
+
 
     <script src="js/script.js"></script>
 </body>

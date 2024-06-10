@@ -3,7 +3,24 @@ $primary-color: #254336;
 $secondary-color: #B7B597;
 $text-color: #B7B597;
 $additional-color: #6B8A7A;
-
+#preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-color;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
@@ -108,6 +125,60 @@ main {
     .services,
     .about-us {
         margin-bottom: 2em;
+    }
+    .carousel{
+        .slickSlider{
+            img{
+                max-width: 400px;
+            }
+            .slick-dots li{
+               button:before{
+                font-size: 30px;
+               }
+            }
+        }
+    }
+    .services{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        h2{
+            font-size: 50px;
+            text-align: center;
+            margin: 1em 0 1em 0 ;
+        }
+        /* Додати це до вашого SCSS файлу */
+        .services_blocks{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .services_block {
+            width: 300px;
+            height: 500px;
+            background: $secondary-color;
+            color: $text-color;
+            position: relative;
+            overflow: hidden;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: -100%;
+                left: -100%;
+                width: 200%;
+                height: 200%;
+                background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+                transform: rotate(45deg);
+                transition: top 0.5s, left 0.5s;
+            }
+        
+            &.scrolled:before {
+                top: 100%;
+                left: 100%;
+            }
+        }
+
     }
 }
 
