@@ -1,12 +1,12 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
-  color: #333;
+  color: #B7B597;
 }
 
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: #254336;
+  color: #B7B597;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,7 +20,7 @@ header nav {
   justify-content: space-between;
 }
 header .logo a {
-  color: #fff;
+  color: #B7B597;
   text-decoration: none;
   font-size: 1.5em;
 }
@@ -30,7 +30,7 @@ header .burger-menu {
   cursor: pointer;
 }
 header .burger-menu span {
-  background-color: #fff;
+  background-color: #B7B597;
   height: 3px;
   width: 25px;
   margin: 4px 0;
@@ -47,7 +47,7 @@ header .nav-links li {
   position: relative;
 }
 header .nav-links li a {
-  color: #fff;
+  color: #B7B597;
   text-decoration: none;
   padding: 10px 20px;
   display: block;
@@ -61,18 +61,18 @@ header .nav-links li .dropdown-content {
   z-index: 1;
 }
 header .nav-links li .dropdown-content li {
-  color: #333;
+  color: #254336;
   padding: 12px 16px;
   text-align: left;
 }
 header .nav-links li .dropdown-content li a {
-  color: #333;
+  color: #254336;
 }
 header .nav-links li:hover .dropdown-content {
   display: block;
 }
 header .nav-links .arrow-down {
-  border: solid #fff;
+  border: solid #B7B597;
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 3px;
@@ -91,8 +91,8 @@ main .about-us {
 }
 
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #254336;
+  color: #B7B597;
   text-align: center;
   padding: 1em;
 }
@@ -120,7 +120,7 @@ footer {
     left: 0;
     width: 100%;
     position: absolute;
-    background: #333;
+    background: #254336;
     left: 0;
     top: 60px;
     z-index: 5;

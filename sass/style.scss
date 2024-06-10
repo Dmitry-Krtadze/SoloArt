@@ -1,26 +1,34 @@
+// Кольорові змінні
+$primary-color: #254336;
+$secondary-color: #B7B597;
+$text-color: #B7B597;
+$additional-color: #6B8A7A;
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
-    color: #333;
+    color: $text-color;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: $primary-color;
+    color: $text-color;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 60px;
     padding: 1em;
-    nav{
+
+    nav {
         display: flex;
-        margin:  0 auto;
+        margin: 0 auto;
         width: 90%;
         justify-content: space-between;
     }
+
     .logo {
         a {
-            color: #fff;
+            color: $text-color;
             text-decoration: none;
             font-size: 1.5em;
         }
@@ -32,7 +40,7 @@ header {
         cursor: pointer;
 
         span {
-            background-color: #fff;
+            background-color: $text-color;
             height: 3px;
             width: 25px;
             margin: 4px 0;
@@ -51,7 +59,7 @@ header {
             position: relative;
 
             a {
-                color: #fff;
+                color: $text-color;
                 text-decoration: none;
                 padding: 10px 20px;
                 display: block;
@@ -66,12 +74,12 @@ header {
                 z-index: 1;
 
                 li {
-                    color: #333;
+                    color: $primary-color;
                     padding: 12px 16px;
                     text-align: left;
 
                     a {
-                        color: #333;
+                        color: $primary-color;
                     }
                 }
             }
@@ -82,7 +90,7 @@ header {
         }
 
         .arrow-down {
-            border: solid #fff;
+            border: solid $text-color;
             border-width: 0 2px 2px 0;
             display: inline-block;
             padding: 3px;
@@ -104,26 +112,24 @@ main {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: $primary-color;
+    color: $text-color;
     text-align: center;
     padding: 1em;
 }
 
 @media screen and (max-width: 768px) {
-  
     header .burger-menu {
-        display: flex ;
+        display: flex;
         position: absolute;
         right: 50px;
-        top: 20px; 
+        top: 20px;
         z-index: 10;
     }
 
     header .nav-links {
         transition: 0.5s;
         position: absolute;
-        
         left: -1200px;
         flex-direction: column;
         width: 100%;
@@ -138,7 +144,7 @@ footer {
         left: 0;
         width: 100%;
         position: absolute;
-        background: #333;
+        background: $primary-color;
         left: 0;
         top: 60px;
         z-index: 5;
