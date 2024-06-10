@@ -204,6 +204,7 @@ footer {
         left: -1200px;
         flex-direction: column;
         width: 100%;
+        z-index: 100000;
         text-align: center;
 
         li {
@@ -218,7 +219,7 @@ footer {
         background: $primary-color;
         left: 0;
         top: 60px;
-        z-index: 5;
+        z-index: 100000;
         text-align: left;
         padding-left: 30px;
         padding-top: 20px;
