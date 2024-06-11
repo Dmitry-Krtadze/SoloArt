@@ -2,6 +2,7 @@
 $primary-color: #254336;
 $secondary-color: #B7B597;
 $text-color: #B7B597;
+$second-text-color: #1A2130;
 $additional-color: #6B8A7A;
 #preloader{
     position: fixed;
@@ -154,32 +155,176 @@ main {
             justify-content: space-around;
         }
         .services_block {
-            width: 300px;
-            height: 500px;
+            max-width: 200px;
+            width: 100%;
+            height: 300px;
+          
             background: $secondary-color;
             color: $text-color;
             position: relative;
             overflow: hidden;
+            border-radius: 15px;
+            padding: 50px;
+            text-align: center;
+            transition: 0.3s;
+            z-index: 10;
 
-            &:before {
-                content: '';
-                position: absolute;
-                top: -100%;
-                left: -100%;
-                width: 200%;
-                height: 200%;
-                background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-                transform: rotate(45deg);
-                transition: top 0.5s, left 0.5s;
+            p{
+                font-size: 30px;
+                color: rgb(33, 30, 30);
+                z-index: 100;
+
             }
-        
-            &.scrolled:before {
-                top: 100%;
-                left: 100%;
-            }
+            
+            
+            
+        }
+        .services_block:hover{
+            
+            -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, rgb(13, 13, 12) 50%, rgba(0, 0, 0, .6) 70%);
+            -webkit-mask-size: 200%;
+            animation: wave 20s ease-in-out forwards;
+            
+
         }
 
     }
+    .BeTitle{
+        text-align: center;
+        font-size: 40px;
+        color: $second-text-color;
+        
+        margin: 3% 0 3% 0;
+    }
+    .about-us{
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap:wrap;
+        width: 100%;
+        .about-us_left{
+            
+            width: 40%;
+            img{
+                width: 100%;
+                border-radius: 15px;
+            }
+        }
+        .about-us_right{
+            margin-left: 1%;
+            width: 50%;
+            text-align: center;
+            h2{
+                font-size: 80px;
+                margin-bottom: 30px;
+            }
+            p{
+                font-size: 30px;
+            }
+        }
+    }
+    .advantages{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .advantages_up{
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+        .advantages_down{
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+        .advantages_block{
+            max-width: 300px ;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            h2{
+                font-size: 30px;
+                color: $second-text-color;
+                margin: 6% 0 6% 0;
+            }
+            p{
+                text-align: center;
+            }
+        }
+    }
+    .progress-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+    }
+    .progress-blocks{
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        height: 100%;
+        width: 100%;
+        .progress-block {
+            margin: 20px 0;
+            max-width: 280px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: $second-text-color;
+            p{
+                width: 200px;
+            }
+            h3{
+                font-size: 22px;
+            }
+        }
+        .progress-circle {
+            margin: 50px 0 50px 0;
+            position: relative;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div{
+                font-size: 30px;
+                color: $second-text-color;
+            }
+        }
+        
+        .circular-chart {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .circle-bg {
+            fill: none;
+            stroke: #eee;
+            stroke-width: 3.8;
+        }
+        
+        .circle {
+            fill: none;
+            stroke-width: 2.8;
+            stroke: #254336; /* Primary color */
+            stroke-linecap: round;
+            transition: stroke-dasharray 0.3s ease;
+        }
+        
+        .progress-value {
+            font-size: 1.5em;
+            color: #254336; /* Primary color */
+        }
+    }
+    
+    
+    
+    
 }
 
 footer {
@@ -188,7 +333,32 @@ footer {
     text-align: center;
     padding: 1em;
 }
-
+@-webkit-keyframes wave {
+    from {
+      -webkit-mask-position: 150%;
+    }
+    to {
+      -webkit-mask-position: -50%;
+    }
+  }
+@media screen and (max-width: 1024px) {
+    .about-us{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        .about-us_right{
+            margin-bottom: 4%;
+        }
+    }
+    .progress-blocks{
+        flex-direction: column;
+        align-items: center !important;
+    }
+    main .advantages .advantages_block{
+        max-width: 200px;
+        text-align: center;
+    }
+}
 @media screen and (max-width: 768px) {
     header .burger-menu {
         display: flex;
@@ -224,5 +394,25 @@ footer {
         padding-left: 30px;
         padding-top: 20px;
         padding-bottom: 20px;
+    }
+    main .services .services_block{
+        max-width: 120px;
+        height: 200px;
+        p{
+            font-size: 24px;
+        }
+    }
+    main .advantages .advantages_up,.advantages_down{
+        flex-direction: column;
+    }
+    
+}
+@media screen and (max-width: 768px){
+    main .services .services_blocks{
+        flex-direction: column;
+        align-items: center;
+        .services_block{
+            margin-bottom: 3%;
+        }
     }
 }

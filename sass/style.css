@@ -133,27 +133,153 @@ main .services .services_blocks {
   justify-content: space-around;
 }
 main .services .services_block {
-  width: 300px;
-  height: 500px;
+  max-width: 200px;
+  width: 100%;
+  height: 300px;
   background: #B7B597;
   color: #B7B597;
   position: relative;
   overflow: hidden;
+  border-radius: 15px;
+  padding: 50px;
+  text-align: center;
+  transition: 0.3s;
+  z-index: 10;
 }
-main .services .services_block:before {
-  content: "";
+main .services .services_block p {
+  font-size: 30px;
+  color: rgb(33, 30, 30);
+  z-index: 100;
+}
+main .services .services_block:hover {
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, rgb(13, 13, 12) 50%, rgba(0, 0, 0, 0.6) 70%);
+  -webkit-mask-size: 200%;
+  -webkit-animation: wave 20s ease-in-out forwards;
+          animation: wave 20s ease-in-out forwards;
+}
+main .BeTitle {
+  text-align: center;
+  font-size: 40px;
+  color: #1A2130;
+  margin: 3% 0 3% 0;
+}
+main .about-us {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+main .about-us .about-us_left {
+  width: 40%;
+}
+main .about-us .about-us_left img {
+  width: 100%;
+  border-radius: 15px;
+}
+main .about-us .about-us_right {
+  margin-left: 1%;
+  width: 50%;
+  text-align: center;
+}
+main .about-us .about-us_right h2 {
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+main .about-us .about-us_right p {
+  font-size: 30px;
+}
+main .advantages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .advantages .advantages_up {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+main .advantages .advantages_down {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+main .advantages .advantages_block {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+main .advantages .advantages_block h2 {
+  font-size: 30px;
+  color: #1A2130;
+  margin: 6% 0 6% 0;
+}
+main .advantages .advantages_block p {
+  text-align: center;
+}
+main .progress-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .progress-blocks {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  height: 100%;
+  width: 100%;
+}
+main .progress-blocks .progress-block {
+  margin: 20px 0;
+  max-width: 280px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #1A2130;
+}
+main .progress-blocks .progress-block p {
+  width: 200px;
+}
+main .progress-blocks .progress-block h3 {
+  font-size: 22px;
+}
+main .progress-blocks .progress-circle {
+  margin: 50px 0 50px 0;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .progress-blocks .progress-circle div {
+  font-size: 30px;
+  color: #1A2130;
+}
+main .progress-blocks .circular-chart {
   position: absolute;
-  top: -100%;
-  left: -100%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-  transform: rotate(45deg);
-  transition: top 0.5s, left 0.5s;
+  width: 100%;
+  height: 100%;
 }
-main .services .services_block.scrolled:before {
-  top: 100%;
-  left: 100%;
+main .progress-blocks .circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+main .progress-blocks .circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke: #254336; /* Primary color */
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.3s ease;
+}
+main .progress-blocks .progress-value {
+  font-size: 1.5em;
+  color: #254336; /* Primary color */
 }
 
 footer {
@@ -163,6 +289,32 @@ footer {
   padding: 1em;
 }
 
+@-webkit-keyframes wave {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .about-us {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .about-us .about-us_right {
+    margin-bottom: 4%;
+  }
+  .progress-blocks {
+    flex-direction: column;
+    align-items: center !important;
+  }
+  main .advantages .advantages_block {
+    max-width: 200px;
+    text-align: center;
+  }
+}
 @media screen and (max-width: 768px) {
   header .burger-menu {
     display: flex;
@@ -195,5 +347,24 @@ footer {
     padding-left: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+  main .services .services_block {
+    max-width: 120px;
+    height: 200px;
+  }
+  main .services .services_block p {
+    font-size: 24px;
+  }
+  main .advantages .advantages_up, .advantages_down {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .services .services_blocks {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .services .services_blocks .services_block {
+    margin-bottom: 3%;
   }
 }/*# sourceMappingURL=style.css.map */
