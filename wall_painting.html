@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Головна - Soul Art</title>
+    <title>Розпис стін - Soul Art</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+
+
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="sass/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <section id="preloader">
@@ -61,7 +65,51 @@
 
 
 
+        <section class="SliderWallPainting">
+            <div class="slider-for">
+                <div><img src="photos/kartina.jpg" alt=""></div>
+                <div><img src="photos/wall.jpg" alt=""></div>
+                <div><img src="photos/predmet.jpg" alt=""></div>
+                <div><img src="photos/formBG.jpg" alt=""></div>
 
+              </div>
+              
+              <div class="slider-nav">
+                <div><img src="photos/kartina.jpg" alt=""></div>
+                <div><img src="photos/wall.jpg" alt=""></div>
+                <div><img src="photos/predmet.jpg" alt=""></div>
+                <div><img src="photos/formBG.jpg" alt=""></div>
+              </div>
+        </section>
+
+
+
+        <section class="videoPlayer">
+            <div class="BeTitle">Приклади робот</div>
+            <div class="videoPlayer_content">
+
+                <div class="videoPlayer_item">
+                    <video id="player" playsinline controls data-poster="photos/kartina.jpg">
+                        <source src="/video/video.mp4" type="video/mp4" />
+                      
+                    </video>
+                </div>
+                <div class="videoPlayer_item">
+                    <video id="player1" playsinline controls data-poster="photos/kartina.jpg">
+                        <source src="/video/video.mp4" type="video/mp4" />
+                      
+                    </video>
+                </div>
+                <div class="videoPlayer_item">
+                    <video id="player2" playsinline controls data-poster="photos/kartina.jpg">
+                        <source src="/video/video.mp4" type="video/mp4" />
+                      
+                    </video>
+                </div>
+                
+               
+            </div>
+        </section>
 
 
 
@@ -178,17 +226,105 @@
 
 
 
+        <section class="Implementation">
+            <div class="BeTitle">Варінти виконання робот</div>
+            <div class="Implementation_content">
+                <div class="Implementation_block">
+                    <div class="Implementation_blockLeft">
+                        <img src="photos/kartina.jpg" alt="">
+                    </div>
+                    <div class="Implementation_blockRight">
+                        <h2>Простий</h2>
+                        <p>Малюнок без складної та дрібної деталізації, із застосуванням малої кількості відтінків. Також стосується об'єктів з великою квадратурою, стінописів — понад 100 м2</p>
+                        <button id="openPopup">Замовити</button>
+                    </div>
+                </div>
+                <div class="Implementation_block">
+                    <div class="Implementation_blockLeft">
+                        <img src="photos/kartina.jpg" alt="">
+                    </div>
+                    <div class="Implementation_blockRight">
+                        <h2>Розширений</h2>
+                        <p>Малюнок з середньою деталізацією, складними формами та великою кількістю відтінків. Підходить для малювання людей, тварин, простих 3D-об'єктів.</p>
+                        <button id="openPopup">Замовити</button>
+                    </div>
+                </div>
+                <div class="Implementation_block">
+                    <div class="Implementation_blockLeft">
+                        <img src="photos/kartina.jpg" alt="">
+                    </div>
+                    <div class="Implementation_blockRight">
+                        <h2>Поглиблений</h2>
+                        <p>Малюнок з дрібними елементами або великою кількістю деталізованих персонажів. </p>
+                        <button id="openPopup">Замовити</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <div id="popupForm" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Заповніть форму</h2>
+            <form id="contactForm">
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="phone">Контактний номер телефону:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="workType">Вид роботи:</label>
+                <select name="workType" id="selectForm">
+                    <option value="WallPainting">Розпис стін</option>
+                    <option value="3Dvisualization">3D візуалізація</option>
+                    <option value="PicturesToOrder">Картини на замовлення</option>
+                    <option value="PaintingOfObjects">Розпис предметів</option>
+                    <option value="another">Інше</option>
+                </select>
+                
+                <button type="submit">Замовити</button>
+            </form>
+        </div>
+    </div>
 
 
     </main>
     <footer>
         <!-- Контакти, соц мережі -->
     </footer>
+
+    
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="js/slick.min.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/jellyTriangle.js"></script>
 
 
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+
+
+
+    <script src="path/to/plyr.js"></script>
+    <script>
+        const player = new Plyr('#player');
+        const player1 = new Plyr('#player1');
+        const player2 = new Plyr('#player2');
+    </script>
+
+    <script src="js/slick.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
