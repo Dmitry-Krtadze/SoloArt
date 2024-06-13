@@ -1,9 +1,9 @@
 // Кольорові змінні
-$primary-color: #254336;
+$primary-color: #151515;
 $secondary-color: #B7B597;
-$text-color: #B7B597;
-$second-text-color: #1A2130;
-$additional-color: #6B8A7A;
+$text-color: #322C2B;
+$second-text-color: #F3F7EC;
+
 #preloader{
     position: fixed;
     top: 0;
@@ -77,7 +77,7 @@ header {
             position: relative;
 
             a {
-                color: $text-color;
+                color: #F3F7EC;
                 text-decoration: none;
                 padding: 10px 20px;
                 display: block;
@@ -120,8 +120,12 @@ header {
 }
 
 main {
+    .chernii{
+        color: #000 !important;
+    }
     padding: 2em;
-
+    background: rgb(175,130,96);
+background: linear-gradient(124deg, rgba(175,130,96,1) 0%, rgba(228,197,158,1) 100%);
     .carousel,
     .services,
     .about-us {
@@ -145,11 +149,11 @@ main {
         justify-content: center;
         flex-direction: column;
         h2{
-            font-size: 50px;
+            font-size: 40px;
             text-align: center;
             margin: 1em 0 1em 0 ;
         }
-        /* Додати це до вашого SCSS файлу */
+        
         .services_blocks{
             width: 100%;
             display: flex;
@@ -160,8 +164,9 @@ main {
             width: 100%;
             height: 300px;
           
-            background: $secondary-color;
+          
             color: $text-color;
+            background-size: cover;
             position: relative;
             overflow: hidden;
             border-radius: 15px;
@@ -172,13 +177,31 @@ main {
 
             p{
                 font-size: 30px;
-                color: rgb(33, 30, 30);
+                color: $second-text-color;
                 z-index: 100;
 
             }
             
             
             
+        }
+        .services_block1{
+            background: url('../photos/wall.jpg');
+            background-size: cover;
+        }
+        .services_block2{
+            background: url('../photos/formBG.jpg');
+            background-size: cover;
+        }
+        .services_block3{
+            background: url('../photos/predmet.jpg');
+            background-size: cover;
+       
+
+        }
+        .services_block4{
+            background: url('../photos/kartina.jpg');
+            background-size: cover;
         }
         .services_block:hover{
             
@@ -193,7 +216,7 @@ main {
     .BeTitle{
         text-align: center;
         font-size: 40px;
-        color: $second-text-color;
+        color: #803D3B;
         
         margin: 3% 0 3% 0;
     }
@@ -203,8 +226,10 @@ main {
         justify-content: space-around;
         flex-wrap:wrap;
         width: 100%;
+       
         .about-us_left{
-            
+            display: flex;
+        align-items: center;
             width: 40%;
             img{
                 width: 100%;
@@ -217,10 +242,12 @@ main {
             text-align: center;
             h2{
                 font-size: 80px;
+                color: #000;
                 margin-bottom: 30px;
             }
             p{
                 font-size: 30px;
+                margin-bottom: 40px;
             }
         }
     }
@@ -247,13 +274,15 @@ main {
             margin: 20px;
             h2{
                 font-size: 30px;
-                color: $second-text-color;
+                color: $text-color;
                 margin: 6% 0 6% 0;
             }
             p{
                 text-align: center;
             }
+           
         }
+       
     }
     .progress-section {
         display: flex;
@@ -275,7 +304,7 @@ main {
             flex-direction: column;
             align-items: center;
             text-align: center;
-            color: $second-text-color;
+            color: $text-color ;
             p{
                 width: 200px;
             }
@@ -293,7 +322,7 @@ main {
             align-items: center;
             div{
                 font-size: 30px;
-                color: $second-text-color;
+                color: $text-color;
             }
         }
         
@@ -305,14 +334,14 @@ main {
         
         .circle-bg {
             fill: none;
-            stroke: #eee;
+            stroke: $primary-color;
             stroke-width: 3.8;
         }
         
         .circle {
             fill: none;
             stroke-width: 2.8;
-            stroke: #254336; /* Primary color */
+            stroke: #803D3B; /* Primary color */
             stroke-linecap: round;
             transition: stroke-dasharray 0.3s ease;
         }
@@ -324,10 +353,104 @@ main {
     }
     
     
+    #openPopup {
+        padding: 10px 20px;
+        background-color: #254336;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .popup {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    
+       
+    }
     
     
-}
+    #contactForm {
+        margin: 0 auto;
+        width: 455px;
+        height: 400px;
+        padding: 50px;
+        border-radius: 15px;
+        background: url('../photos/formBG.jpg');
+        background-size: cover;
+       
+    }
+    
 
+        h2 {
+            text-align: center;
+            color: $second-text-color;
+        }
+
+        label {
+            display: block;
+            color: $second-text-color;
+            font-size: 17px;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 22px;
+        }   
+        #selectForm{
+            width: 85%;
+            height: 40px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            font-size: 22px;
+            color: $secondary-color;
+        }
+
+        button {
+            width: 100%;
+            padding: 27px;
+            background-color: #254336;
+            font-size: 32px;
+            filter: drop-shadow();
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            -webkit-box-shadow: 7px 9px 2px 0px rgba(232,218,193,0.17);
+sx-shadow: 7px 9px 2px 0px rgba(232,218,193,0.17);
+
+
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            color: #aaa;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+
+    }
 footer {
     background-color: $primary-color;
     color: $text-color;
@@ -423,10 +546,21 @@ footer {
         width: 100%;
         margin: 0;
         padding: 0;
+        
     }
     main .about-us .about-us_right{
         width: 100%;
         margin-bottom: 5%;
         padding: 0;
     }
+}
+h1, h2,h3, li,a{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }

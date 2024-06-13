@@ -1,11 +1,10 @@
-@charset "UTF-8";
 #preloader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #254336;
+  background-color: #151515;
   z-index: 10000;
   display: flex;
   justify-content: center;
@@ -22,12 +21,12 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
-  color: #B7B597;
+  color: #322C2B;
 }
 
 header {
-  background-color: #254336;
-  color: #B7B597;
+  background-color: #151515;
+  color: #322C2B;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,7 +40,7 @@ header nav {
   justify-content: space-between;
 }
 header .logo a {
-  color: #B7B597;
+  color: #322C2B;
   text-decoration: none;
   font-size: 1.5em;
 }
@@ -51,7 +50,7 @@ header .burger-menu {
   cursor: pointer;
 }
 header .burger-menu span {
-  background-color: #B7B597;
+  background-color: #322C2B;
   height: 3px;
   width: 25px;
   margin: 4px 0;
@@ -68,7 +67,7 @@ header .nav-links li {
   position: relative;
 }
 header .nav-links li a {
-  color: #B7B597;
+  color: #F3F7EC;
   text-decoration: none;
   padding: 10px 20px;
   display: block;
@@ -82,18 +81,18 @@ header .nav-links li .dropdown-content {
   z-index: 1;
 }
 header .nav-links li .dropdown-content li {
-  color: #254336;
+  color: #151515;
   padding: 12px 16px;
   text-align: left;
 }
 header .nav-links li .dropdown-content li a {
-  color: #254336;
+  color: #151515;
 }
 header .nav-links li:hover .dropdown-content {
   display: block;
 }
 header .nav-links .arrow-down {
-  border: solid #B7B597;
+  border: solid #322C2B;
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 3px;
@@ -104,6 +103,11 @@ header .nav-links .arrow-down {
 
 main {
   padding: 2em;
+  background: rgb(175, 130, 96);
+  background: linear-gradient(124deg, rgb(175, 130, 96) 0%, rgb(228, 197, 158) 100%);
+}
+main .chernii {
+  color: #000 !important;
 }
 main .carousel,
 main .services,
@@ -111,7 +115,8 @@ main .about-us {
   margin-bottom: 2em;
 }
 main .carousel .slickSlider img {
-  max-width: 400px;
+  max-width: 500px;
+  width: 100%;
 }
 main .carousel .slickSlider .slick-dots li button:before {
   font-size: 30px;
@@ -120,10 +125,9 @@ main .services {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* Додати це до вашого SCSS файлу */
 }
 main .services h2 {
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
   margin: 1em 0 1em 0;
 }
@@ -136,8 +140,8 @@ main .services .services_block {
   max-width: 200px;
   width: 100%;
   height: 300px;
-  background: #B7B597;
-  color: #B7B597;
+  color: #322C2B;
+  background-size: cover;
   position: relative;
   overflow: hidden;
   border-radius: 15px;
@@ -148,19 +152,34 @@ main .services .services_block {
 }
 main .services .services_block p {
   font-size: 30px;
-  color: rgb(33, 30, 30);
+  color: #F3F7EC;
   z-index: 100;
+}
+main .services .services_block1 {
+  background: url("../photos/wall.jpg");
+  background-size: cover;
+}
+main .services .services_block2 {
+  background: url("../photos/formBG.jpg");
+  background-size: cover;
+}
+main .services .services_block3 {
+  background: url("../photos/predmet.jpg");
+  background-size: cover;
+}
+main .services .services_block4 {
+  background: url("../photos/kartina.jpg");
+  background-size: cover;
 }
 main .services .services_block:hover {
   -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, rgb(13, 13, 12) 50%, rgba(0, 0, 0, 0.6) 70%);
   -webkit-mask-size: 200%;
-  -webkit-animation: wave 20s ease-in-out forwards;
-          animation: wave 20s ease-in-out forwards;
+  animation: wave 20s ease-in-out forwards;
 }
 main .BeTitle {
   text-align: center;
   font-size: 40px;
-  color: #1A2130;
+  color: #803D3B;
   margin: 3% 0 3% 0;
 }
 main .about-us {
@@ -171,6 +190,8 @@ main .about-us {
   width: 100%;
 }
 main .about-us .about-us_left {
+  display: flex;
+  align-items: center;
   width: 40%;
 }
 main .about-us .about-us_left img {
@@ -184,10 +205,12 @@ main .about-us .about-us_right {
 }
 main .about-us .about-us_right h2 {
   font-size: 80px;
+  color: #000;
   margin-bottom: 30px;
 }
 main .about-us .about-us_right p {
   font-size: 30px;
+  margin-bottom: 40px;
 }
 main .advantages {
   display: flex;
@@ -213,7 +236,7 @@ main .advantages .advantages_block {
 }
 main .advantages .advantages_block h2 {
   font-size: 30px;
-  color: #1A2130;
+  color: #322C2B;
   margin: 6% 0 6% 0;
 }
 main .advantages .advantages_block p {
@@ -239,7 +262,7 @@ main .progress-blocks .progress-block {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: #1A2130;
+  color: #322C2B;
 }
 main .progress-blocks .progress-block p {
   width: 200px;
@@ -258,7 +281,7 @@ main .progress-blocks .progress-circle {
 }
 main .progress-blocks .progress-circle div {
   font-size: 30px;
-  color: #1A2130;
+  color: #322C2B;
 }
 main .progress-blocks .circular-chart {
   position: absolute;
@@ -267,13 +290,13 @@ main .progress-blocks .circular-chart {
 }
 main .progress-blocks .circle-bg {
   fill: none;
-  stroke: #eee;
+  stroke: #151515;
   stroke-width: 3.8;
 }
 main .progress-blocks .circle {
   fill: none;
   stroke-width: 2.8;
-  stroke: #254336; /* Primary color */
+  stroke: #803D3B; /* Primary color */
   stroke-linecap: round;
   transition: stroke-dasharray 0.3s ease;
 }
@@ -281,21 +304,92 @@ main .progress-blocks .progress-value {
   font-size: 1.5em;
   color: #254336; /* Primary color */
 }
-
-footer {
+main #openPopup {
+  padding: 10px 20px;
   background-color: #254336;
-  color: #B7B597;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+main .popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+main #contactForm {
+  margin: 0 auto;
+  width: 455px;
+  height: 400px;
+  padding: 50px;
+  border-radius: 15px;
+  background: url("../photos/formBG.jpg");
+  background-size: cover;
+}
+main h2 {
   text-align: center;
-  padding: 1em;
+  color: #F3F7EC;
+}
+main label {
+  display: block;
+  color: #F3F7EC;
+  font-size: 17px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+main input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 22px;
+}
+main #selectForm {
+  width: 85%;
+  height: 40px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  font-size: 22px;
+  color: #B7B597;
+}
+main button {
+  width: 100%;
+  padding: 27px;
+  background-color: #254336;
+  font-size: 32px;
+  filter: drop-shadow();
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-box-shadow: 7px 9px 2px 0px rgba(232, 218, 193, 0.17);
+  sx-shadow: 7px 9px 2px 0px rgba(232, 218, 193, 0.17);
+}
+main .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: #aaa;
+  cursor: pointer;
+}
+main .close:hover, main .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-@-webkit-keyframes wave {
-  from {
-    -webkit-mask-position: 150%;
-  }
-  to {
-    -webkit-mask-position: -50%;
-  }
+footer {
+  background-color: #151515;
+  color: #322C2B;
+  text-align: center;
+  padding: 1em;
 }
 @media screen and (max-width: 1024px) {
   .about-us {
@@ -339,7 +433,7 @@ footer {
     left: 0;
     width: 100%;
     position: absolute;
-    background: #254336;
+    background: #151515;
     left: 0;
     top: 60px;
     z-index: 100000;
@@ -380,4 +474,15 @@ footer {
     margin-bottom: 5%;
     padding: 0;
   }
+}
+h1, h2, h3, li, a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }/*# sourceMappingURL=style.css.map */
