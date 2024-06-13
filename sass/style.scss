@@ -575,10 +575,12 @@ footer {
                     h2{
                         font-size: 5em;
                         margin-bottom: 5%;
+                        color: #803D3B  ;
                     }
                     p{
                         font-size: 1.3em;
                         margin-bottom: 5%;
+                        color: #803D3B  ;
                     }
                 }
             }
@@ -691,11 +693,16 @@ footer {
     }
     .SliderWallPainting{
         .slick-dots{
-            bottom: 100px;
+            bottom: 40px;
         }
         .slick-dots li button:before{
             font-size: 40px;
         }
+    }
+    main .WallPaintingMainTitle{
+        font-size: 4em;
+
+    margin: 0% 0 3% 0;
     }
     .videoPlayer_content{
         flex-direction: column;
@@ -703,6 +710,10 @@ footer {
     .videoPlayer .videoPlayer_item{
         width: 90%;
     }
+    .SliderWallPainting .slider-for .slick-slide{
+        height: 600px;
+    }
+
     .Implementation_block{
         flex-direction: column;
         align-items: center;
