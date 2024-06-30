@@ -351,7 +351,23 @@ background: linear-gradient(124deg, rgba(175,130,96,1) 0%, rgba(228,197,158,1) 1
             color: #254336; /* Primary color */
         }
     }
-    
+    .popup{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+            
+       }
+       .popup-content{
+            h2{
+                font-size: 2em;
+                margin-bottom: -55px;
+            }   
+            #contactForm{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }     
+        }
     
     #openPopup {
         padding: 10px 20px;
@@ -388,69 +404,117 @@ background: linear-gradient(124deg, rgba(175,130,96,1) 0%, rgba(228,197,158,1) 1
     }
     
 
-        h2 {
-            text-align: center;
-            color: $second-text-color;
-        }
+    h2 {
+        text-align: center;
+        color: $second-text-color;
+    }
 
-        label {
-            display: block;
-            color: $second-text-color;
-            font-size: 17px;
-            margin-top: 20px;
-            margin-bottom: 5px;
-        }
+    label {
+        display: block;
+        color: $second-text-color;
+        font-size: 17px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
 
-        input {
-            width: 80%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 22px;
-        }   
-        #selectForm{
-            width: 85%;
-            height: 40px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            font-size: 22px;
-            color: $secondary-color;
-        }
+    input {
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 22px;
+    }   
+    #selectForm{
+        width: 85%;
+        height: 40px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        font-size: 22px;
+        color: $secondary-color;
+    }
 
-        button {
-            width: 100%;
-            padding: 27px;
-            background-color: #254336;
-            font-size: 32px;
-            filter: drop-shadow();
-            color: #fff;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            -webkit-box-shadow: 7px 9px 2px 0px rgba(232,218,193,0.17);
-sx-shadow: 7px 9px 2px 0px rgba(232,218,193,0.17);
+    button {
+        width: 100%;
+        padding: 27px;
+        background-color: #254336;
+        font-size: 32px;
+        filter: drop-shadow();
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        -webkit-box-shadow: 7px 9px 2px 0px rgba(232,218,193,0.17);
+       
 
-
-        }
-
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 40px;
-            font-size: 80px;
-            color: #aaa;
-            cursor: pointer;
-
-            &:hover,
-            &:focus {
-                color: black;
-                text-decoration: none;
-                cursor: pointer;
-            }
-        }
 
     }
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 40px;
+        font-size: 80px;
+        color: #aaa;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+
+
+    .WhatIncludes {
+        .WhatIncludes_content {
+            display: flex;
+            justify-content: space-around;
+            .WhatIncludes_left {
+                width: 40%;
+                img{
+                    width: 100%;
+                    height: 85%;
+                }
+            }
+            .WhatIncludes_right {
+                display: flex;
+                width: 60%;
+                justify-content: center;
+                .WhatIncludes_rightC {
+                    display: flex;
+                    width: 40%;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    .WhatIncludes_rightC1_Block {
+                        margin-right: 5%;
+                        display: flex;
+                        height: 150px;
+                        align-items: center;
+                        img{
+                            margin-right: 30px;
+                        }
+                        h3{
+                            font-size: 40px;
+                        }
+                    }
+                }
+                
+            }
+           
+        }
+       
+    }
+   
+    
+
+}
+
+
+
+
 footer {
     background-color: $primary-color;
     color: $text-color;
@@ -484,7 +548,12 @@ footer {
     }
 
 
-
+    main .WhatIncludes .WhatIncludes_content .WhatIncludes_right .WhatIncludes_rightC .WhatIncludes_rightC1_Block{
+        font-size: 24px;
+        img{
+            width: 25%;
+        }
+    }
 
 
 
@@ -589,23 +658,7 @@ footer {
         
     }
     
-   #popupForm{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-        
-   }
-   .popup-content{
-        h2{
-            font-size: 2em;
-            margin-bottom: -55px;
-        }   
-        #contactForm{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }     
-    }
+   
 
 @media screen and (max-width: 768px) {
     header .burger-menu {
@@ -671,6 +724,22 @@ footer {
             font-size: 1em;
         }
     }
+    main #contactForm{
+        width: 300px;
+    }
+    .WhatIncludes_content{
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    main .WhatIncludes .WhatIncludes_content .WhatIncludes_left{
+        width: 100%;
+    }
+    main .WhatIncludes .WhatIncludes_content .WhatIncludes_right{
+        width: 90%;
+    }
+    
     
 }
 @media screen and (max-width: 450px){
@@ -731,10 +800,21 @@ footer {
             font-size: 3em;
         }
     }
+    main .WhatIncludes .WhatIncludes_content .WhatIncludes_right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        align-items: center;
+    }
 }
 
 
-
+@media screen and (max-width: 350px){
+    main #contactForm{
+        width: 190px;
+    }
+}
 
 
 

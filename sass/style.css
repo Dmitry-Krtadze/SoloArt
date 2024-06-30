@@ -40,7 +40,7 @@ header nav {
   justify-content: space-between;
 }
 header .logo a {
-  color: #322C2B;
+  color: #B7B597;
   text-decoration: none;
   font-size: 1.5em;
 }
@@ -50,7 +50,7 @@ header .burger-menu {
   cursor: pointer;
 }
 header .burger-menu span {
-  background-color: #322C2B;
+  background-color: #B7B597;
   height: 3px;
   width: 25px;
   margin: 4px 0;
@@ -92,11 +92,13 @@ header .nav-links li:hover .dropdown-content {
   display: block;
 }
 header .nav-links .arrow-down {
-  border: solid #322C2B;
+  border: solid #B7B597;
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 3px;
+  position: relative;
   margin-left: 5px;
+  top: -3px;
   transform: rotate(45deg);
   transition: transform 0.4s;
 }
@@ -174,8 +176,7 @@ main .services .services_block4 {
 main .services .services_block:hover {
   -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, rgb(13, 13, 12) 50%, rgba(0, 0, 0, 0.6) 70%);
   -webkit-mask-size: 200%;
-  -webkit-animation: wave 20s ease-in-out forwards;
-          animation: wave 20s ease-in-out forwards;
+  animation: wave 20s ease-in-out forwards;
 }
 main .BeTitle {
   text-align: center;
@@ -305,6 +306,20 @@ main .progress-blocks .progress-value {
   font-size: 1.5em;
   color: #254336; /* Primary color */
 }
+main .popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .popup-content h2 {
+  font-size: 2em;
+  margin-bottom: -55px;
+}
+main .popup-content #contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 main #openPopup {
   padding: 10px 20px;
   background-color: #254336;
@@ -370,20 +385,54 @@ main button {
   border-radius: 10px;
   cursor: pointer;
   -webkit-box-shadow: 7px 9px 2px 0px rgba(232, 218, 193, 0.17);
-  sx-shadow: 7px 9px 2px 0px rgba(232, 218, 193, 0.17);
 }
 main .close {
-  position: absolute;
-  top: 15px;
-  right: 40px;
-  font-size: 80px;
-  color: #aaa;
-  cursor: pointer;
+     position: relative;
+    top: 50px;
+    left: 90%;
+    font-size: 80px;
+    color: #aaa;
+    cursor: pointer;
 }
 main .close:hover, main .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+main .WhatIncludes .WhatIncludes_content {
+  display: flex;
+  justify-content: space-around;
+}
+main .WhatIncludes .WhatIncludes_content .WhatIncludes_left {
+  width: 40%;
+}
+main .WhatIncludes .WhatIncludes_content .WhatIncludes_left img {
+  width: 100%;
+  height: 85%;
+}
+main .WhatIncludes .WhatIncludes_content .WhatIncludes_right {
+  display: flex;
+  width: 60%;
+  justify-content: center;
+}
+main .WhatIncludes .WhatIncludes_content .WhatIncludes_right .WhatIncludes_rightC {
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .WhatIncludes .WhatIncludes_content .WhatIncludes_right .WhatIncludes_rightC .WhatIncludes_rightC1_Block {
+  margin-right: 5%;
+  display: flex;
+  height: 150px;
+  align-items: center;
+}
+main .WhatIncludes .WhatIncludes_content .WhatIncludes_right .WhatIncludes_rightC .WhatIncludes_rightC1_Block img {
+  margin-right: 30px;
+}
+main .WhatIncludes .WhatIncludes_content .WhatIncludes_right .WhatIncludes_rightC .WhatIncludes_rightC1_Block h3 {
+  font-size: 40px;
 }
 
 footer {
@@ -391,15 +440,6 @@ footer {
   color: #322C2B;
   text-align: center;
   padding: 1em;
-}
-
-@-webkit-keyframes wave {
-  from {
-    -webkit-mask-position: 150%;
-  }
-  to {
-    -webkit-mask-position: -50%;
-  }
 }
 @media screen and (max-width: 1024px) {
   .about-us {
@@ -417,6 +457,12 @@ footer {
   main .advantages .advantages_block {
     max-width: 200px;
     text-align: center;
+  }
+  main .WhatIncludes .WhatIncludes_content .WhatIncludes_right .WhatIncludes_rightC .WhatIncludes_rightC1_Block {
+    font-size: 24px;
+  }
+  main .WhatIncludes .WhatIncludes_content .WhatIncludes_right .WhatIncludes_rightC .WhatIncludes_rightC1_Block img {
+    width: 25%;
   }
 }
 .SliderWallPainting .slider-for {
@@ -492,22 +538,6 @@ footer {
   color: #803D3B;
 }
 
-#popupForm {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.popup-content h2 {
-  font-size: 2em;
-  margin-bottom: -55px;
-}
-.popup-content #contactForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 @media screen and (max-width: 768px) {
   header .burger-menu {
     display: flex;
@@ -567,6 +597,20 @@ footer {
   .Implementation .Implementation_content .Implementation_block .Implementation_blockRight p {
     font-size: 1em;
   }
+  main #contactForm {
+    width: 300px;
+  }
+  .WhatIncludes_content {
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .WhatIncludes .WhatIncludes_content .WhatIncludes_left {
+    width: 100%;
+  }
+  main .WhatIncludes .WhatIncludes_content .WhatIncludes_right {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 450px) {
   main {
@@ -592,7 +636,7 @@ footer {
     font-size: 40px;
   }
   main .WallPaintingMainTitle {
-    font-size: 4em;
+    font-size: 3em;
     margin: 0% 0 3% 0;
   }
   .videoPlayer_content {
@@ -619,6 +663,27 @@ footer {
   }
   .Implementation .Implementation_content .Implementation_block .Implementation_blockRight h2 {
     font-size: 3em;
+  }
+  main .WhatIncludes .WhatIncludes_content .WhatIncludes_right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+  }
+  main #contactForm {
+    width: 220px;
+    padding: 26px;
+  }
+  main .popup-content h2 {
+    font-size: 1.2em;
+    margin-bottom: -23px;
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 350px) {
+  main #contactForm {
+    width: 190px;
   }
 }
 h1, h2, h3, li, a {

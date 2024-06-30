@@ -98,20 +98,22 @@ function counterUp(el, options) {
 
 
 var popup = document.getElementById("popupForm");
-var btn = document.getElementById("openPopup");
+var btns = document.querySelectorAll(".openPopup");
 var span = document.getElementsByClassName("close")[0];
 
+btns.forEach(function(btn) {
 btn.onclick = function() {
-    popup.style.display = "block";
-}
+    popup.style.display = "flex";
+};
+});
 
 span.onclick = function() {
-    popup.style.display = "none";
-}
+popup.style.display = "none";
+};
 
 window.onclick = function(event) {
-    if (event.target == popup) {
-        popup.style.display = "none";
-    }
+if (event.target == popup) {
+    popup.style.display = "none";
 }
+};
 
